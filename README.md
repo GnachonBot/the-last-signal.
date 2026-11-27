@@ -9,10 +9,10 @@ Open `index.html` in a browser. To publish on GitHub Pages, create a public repo
 Edit the `const CONFIG` section near the start of the script in `index.html`:
 - `city`: defaults to `Another city` so the destination stays unnamed.
 - `rendezvous`: optional in-character meeting details.
-- `inviteUrl`: optional approved public HTTPS server invitation (leave empty to hide).
+- `inviteUrl`: approved public HTTPS server invitation; set `inviteApproved: true` only when approved. The invitation is revealed after the player selects WE'LL FOLLOW THE SIGNAL. Leave empty and false until approval.
 - `audioUrl`: optional relative file path (e.g. `transmission.mp3`); upload that recording with the HTML. The transcript is already included. No voice recording is supplied.
 - `frequency`: defaults to 87.6 MHz; use one decimal between 85.0 and 90.0.
-- `phrase`: defaults to `cows and chickens here`; edit the matching visible clues and letter/replies in the HTML if changing it.
+- `phrase`: defaults to `chickens`; edit the matching visible clues and letter/replies in the HTML if changing it.
 - `storageKey`: change the version to start all visitors on a fresh chapter.
 
 ## Game master walkthrough (spoilers)
@@ -20,11 +20,11 @@ Edit the `const CONFIG` section near the start of the script in `index.html`:
 2. Acknowledge the transmission from Tiffy and Rick.
 3. Open field notes about the mysterious signal.
 4. Choose Fragment B in the Cortex dossier (return route compromised).
-5. Enter `Cows and chickens here` (case and punctuation ignored).
+5. Enter `chickens` (case and punctuation ignored).
 6. Read the personal letter to The Sanctuary.
 7. Reveal the next contact instructions and choose one of three optional copyable replies.
 
-Progress is saved in browser local storage where available. Reset Experience clears the local progress. Sound defaults to enabled (browser autoplay restrictions may require a click or key press); use the soundtrack button to mute or resume the original 16-bar cinematic soundtrack in `last-signal-score.wav` (approximately 44 seconds, looping). It features an original melody, piano-like keys, strings, bass and percussion. Distinct browser-generated interaction effects are provided for tuning, signal acquisition, unlocking, wrong answers, Cortex, personal packets, hints, the final reveal and replies. Separate music and SFX volume sliders and a master mute are available. No third-party recordings or tracks are used. Music/SFX preferences are saved on the device.
+Progress is saved in browser local storage where available. Reset Experience clears the local progress. Sound defaults to enabled (browser autoplay restrictions may require a click or key press); use the soundtrack button to mute or resume the original 16-bar cinematic soundtrack in `last-signal-score.wav` (approximately 44 seconds, looping). It features an original melody, piano-like keys, strings, bass and percussion. Distinct browser-generated interaction effects are provided for tuning, signal acquisition, unlocking, wrong answers, Cortex, personal packets, hints, the final reveal and replies. Separate music and SFX volume sliders and a master mute are available. No third-party recordings or tracks are used. Adaptive cues are stored in `score-search.wav`, `last-signal-score.wav`, `score-cortex.wav`, and `score-home.wav`; tracks crossfade between chapters, tuning changes intensity, and important interactions temporarily duck the music. Some browsers restrict programmatic volume or playback. Six personal packets address Ice, Frost, Megan, Ana, Tink and David. Music/SFX preferences are saved on the device.
 
 The deployed page checks its own HTML for changes every 30 seconds, on returning to the tab, and on reconnecting. When it sees a newer version, it reloads automatically and attempts to restore the open file, puzzle inputs, reply, packet states and music position. Increment the relay-version meta tag with each release; the HTML fingerprint also detects changes after the initial successful check. Browser background throttling or offline mode can delay checks. The CHECK NOW button triggers a manual check. Six individually addressed family packets are available in file 06. Replies are not sent automatically. No analytics or backend are included.
 
