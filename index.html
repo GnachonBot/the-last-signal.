@@ -74,7 +74,7 @@ function duckScore(ms=900){duckUntil=Date.now()+ms;clearTimeout(duckTimer);if(mu
 async function startAmbient(){
   const key=wantedScore(),C=window.AudioContext||window.webkitAudioContext;
   if(C){try{audio=audio||new C();audio.resume().catch(()=>{});}catch(e){}}
-  if(music&&scoreKey===key&&!music.paused){setScoreVolume();scoreStatus();return;}
+  if(music&&scoreKey===key&&!music.paused){if(pendingScore&&pendingScore!==key){++scoreToken;pendingScore='';}setScoreVolume();scoreStatus();return;}
   if(pendingScore===key)return;
   const token=++scoreToken;pendingScore=key;
   const previous=music,player=new Audio(SCORE[key].file);scorePlayers.add(player);player.loop=true;player.preload='auto';player.volume=previous?0:Math.min(1,scoreGain());
