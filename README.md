@@ -24,7 +24,7 @@ Edit the `const CONFIG` section near the start of the script in `index.html`:
 6. Read the personal letter to The Sanctuary.
 7. Reveal the next contact instructions and choose one of three optional copyable replies.
 
-Progress is saved in browser local storage where available. Reset Experience clears the local progress. Sound is optional; audio effects are synthesized by the browser. Replies are not sent automatically. No analytics or backend are included.
+Progress is saved in browser local storage where available. Reset Experience clears the local progress. Sound is optional: click ENABLE SOUNDTRACK to start the original browser-synthesized ambient score and effects. No external audio recordings or third-party tracks are used. Volume and mute controls are provided. Six individually addressed family packets are available in file 06. Replies are not sent automatically. No analytics or backend are included.
 
 ## Story / privacy
 The unexplained signal and intercepted fragments are fictional creative additions. Cortex's intentions are not established. The exact city is deliberately unnamed; the site has no real destination or server invite unless you add one. Keep all details fictional or approved for public sharing: GitHub Pages source is public and puzzle locks are not security. Do not put real private data or secrets in it. Participation is optional; use only within your group's agreed RP and server rules. The site is not yet deployed.
